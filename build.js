@@ -408,6 +408,80 @@ var data = [
 
 
         ]
+    },
+    {
+        "sigla": "LEIRT",
+        "nome": "Licenciatura em Engenharia Informática, Redes e Telecomunicações",
+        "provas": [
+           
+
+            {
+                "nome": "asdasd",
+                "regime": "M23",
+                "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23PModelo2019solucao.pdf"
+                    }
+                ]
+            },
+
+            {
+                "nome": "asdasd",
+                "regime": "DET",
+                "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23PModelo2019solucao.pdf"
+                    }
+                ]
+            }
+
+
+        ]
+    },
+    {
+        "sigla": "LEQB",
+        "nome": "[Novo] Licenciatura em Engenharia Química e Biológica",
+        "provas": [
+           
+
+            {
+                "nome": "asdasd",
+                "regime": "M23",
+                "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEQBM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQBM23PModelo2019solucao.pdf"
+                    }
+                ]
+            },
+
+            {
+                "nome": "asdasd",
+                "regime": "DET",
+                "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEQBM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQBM23PModelo2019solucao.pdf"
+                    }
+                ]
+            }
+
+
+        ]
     }
 ];
 
