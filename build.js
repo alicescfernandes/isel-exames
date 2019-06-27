@@ -416,7 +416,7 @@ var data = [
         "sigla": "LEIRT",
         "nome": "Licenciatura em Engenharia Informática, Redes e Telecomunicações",
         "provas": [
-           
+
 
             {
                 "nome": "asdasd",
@@ -428,6 +428,28 @@ var data = [
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019_Solucoes.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23ProvaModelo2019.pdf",
                         "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23PModelo2019solucao.pdf"
+                    },
+                    {
+                        "ano": "2018",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIRT_Prova2018.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIRT_Prova2018_solucao.pdf",
+                        "prova_modelo": "",
+                        "prova_modelo_solucao": ""
+                    },
+                    {
+                        "ano": "2017",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIRT_Prova_2017.pdf",
+                        "prova_solucao": "",
+                        "prova_modelo": "",
+                        "prova_modelo_solucao": "",
+                    },
+        
+                    {
+                        "ano": "2012",
+                        "prova": "",
+                        "prova_solucao": "",
+                        "prova_modelo": "https://www.isel.pt/pinst/servicos/servacademicos/docs/M23/provas2012/ProvaModelo_LEIRT_2012.pdf",
+                        "prova_modelo_solucao": ""
                     }
                 ]
             },
@@ -442,13 +464,20 @@ var data = [
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019_Solucoes.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23ProvaModelo2019.pdf",
                         "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23PModelo2019solucao.pdf"
+                    },
+                    {
+                        "ano": "2018",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIRT_Prova2018.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIRT_Prova2018_solucao.pdf",
+                        "prova_modelo": "",
+                        "prova_modelo_solucao": ""
                     }
                 ]
             }
 
 
         ]
-    },
+        },
     {
         "sigla": "LEQB",
         "nome": "[Novo] Licenciatura em Engenharia Química e Biológica",
