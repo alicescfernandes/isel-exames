@@ -1,5 +1,8 @@
 var fs = require("fs");
 var path = require("path");
+var minify = require('html-minifier').minify;
+
+var markdown = require('markdown-it')({html:true});
 
 var data = [
     {
@@ -533,8 +536,9 @@ data.forEach(function (el) {
     string += "\n\n";
     string += "</tr></table>";
     string +="\n\n"
-    string+="###### Ficheiro gerado em " + (new Date()).toISOString();
-    fs.writeFile("./exames-passados/" + el.sigla.toLocaleLowerCase() + ".md", string, () => {
+    string += "###### Ficheiro gerado em " + (new Date()).toISOString();
+    
+    fs.writeFile("./exames-passados/" + el.sigla.toLocaleLowerCase() + ".md", minify(markdown.render(string),{collapseWhitespace:true}), () => {
         console.log(`Gerado ficheiro para ${el.sigla}@${(new Date()).toISOString()}`)
 });
 })

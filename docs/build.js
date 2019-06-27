@@ -1,5 +1,8 @@
 var fs = require("fs");
 var path = require("path");
+var minify = require('html-minifier').minify;
+
+var markdown = require('markdown-it')({html:true});
 
 var data = [
     {
@@ -10,6 +13,13 @@ var data = [
                 "nome": "asdasd",
                 "regime": "M23",
                 "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEIM_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIM_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEIMM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIMM23PModelo2019solucao.pdf"
+                    },
                     {
                         "ano": "2018",
                         "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIM_Prova2018.pdf",
@@ -53,6 +63,13 @@ var data = [
                 "regime": "DET",
                 "exames": [
                     {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEIM_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIM_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEIMM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIMM23PModelo2019solucao.pdf"
+                    },
+                    {
                         "ano": "2018",
                         "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIM_Prova2018.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIM_Prova2018_solucao.pdf",
@@ -82,7 +99,6 @@ var data = [
                     }
                 ]
             }
-
         ]
     },
 
@@ -91,10 +107,18 @@ var data = [
         "nome": "Licenciatura em Engenharia Informática e Computadores",
         "provas": [
 
+
             {
                 "nome": "asdasd",
                 "regime": "M23",
                 "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEIC_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIC_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEICM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEICM23PModelo2019solucao.pdf"
+                    },
                     {
                         "ano": "2018",
                         "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIC_Prova2018.pdf",
@@ -138,6 +162,13 @@ var data = [
                 "regime": "DET",
                 "exames": [
                     {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEIC_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIC_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEICM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEICM23PModelo2019solucao.pdf"
+                    },
+                    {
                         "ano": "2018",
                         "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIC_Prova2018.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEIC_Prova2018_solucao.pdf",
@@ -176,11 +207,19 @@ var data = [
         "sigla": "LEM",
         "nome": "Licenciatura em Engenharia Mecânica",
         "provas": [
+         
 
             {
                 "nome": "asdasd",
                 "regime": "M23",
                 "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEM_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEM_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEMM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEMM23PModelo2019solucao.pdf"
+                    },
                     {
                         "ano": "2018",
                         "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEM_Prova2018.pdf",
@@ -225,6 +264,13 @@ var data = [
                 "regime": "DET",
                 "exames": [
                     {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEM_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEM_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEMM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEMM23PModelo2019solucao.pdf"
+                    },
+                    {
                         "ano": "2018",
                         "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEM_Prova2018.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEM_Prova2018_solucao.pdf",
@@ -263,11 +309,19 @@ var data = [
         "sigla": "LEE",
         "nome": "Licenciatura em Engenharia Eletrotécnica",
         "provas": [
+           
 
             {
                 "nome": "asdasd",
                 "regime": "M23",
                 "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEE_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEE_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEEM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEEM23PModelo2019solucao.pdf"
+                    },
                     {
                         "ano": "2018",
                         "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEE_Prova2018.pdf",
@@ -311,6 +365,13 @@ var data = [
                 "regime": "DET",
                 "exames": [
                     {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEE_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEE_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEEM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEEM23PModelo2019solucao.pdf"
+                    },
+                    {
                         "ano": "2018",
                         "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEE_Prova2018.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEE_Prova2018_solucao.pdf",
@@ -350,6 +411,80 @@ var data = [
 
 
         ]
+    },
+    {
+        "sigla": "LEIRT",
+        "nome": "Licenciatura em Engenharia Informática, Redes e Telecomunicações",
+        "provas": [
+           
+
+            {
+                "nome": "asdasd",
+                "regime": "M23",
+                "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23PModelo2019solucao.pdf"
+                    }
+                ]
+            },
+
+            {
+                "nome": "asdasd",
+                "regime": "DET",
+                "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRT_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEIRTM23PModelo2019solucao.pdf"
+                    }
+                ]
+            }
+
+
+        ]
+    },
+    {
+        "sigla": "LEQB",
+        "nome": "[Novo] Licenciatura em Engenharia Química e Biológica",
+        "provas": [
+           
+
+            {
+                "nome": "asdasd",
+                "regime": "M23",
+                "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEQBM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQBM23PModelo2019solucao.pdf"
+                    }
+                ]
+            },
+
+            {
+                "nome": "asdasd",
+                "regime": "DET",
+                "exames": [
+                    {
+                        "ano": "2019",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019_Solucoes.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEQBM23ProvaModelo2019.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQBM23PModelo2019solucao.pdf"
+                    }
+                ]
+            }
+
+
+        ]
     }
 ];
 
@@ -358,9 +493,15 @@ var data = [
 data.forEach(function (el) {
     var string = "";
     string += "# " + el.nome + '\n\n';
+    string += "<table><tr valign=\"top\">";
+    string += "\n\n";
     el.provas.forEach(function (prova) {
+        string += "<td>";
+        string += "\n\n";
+        
         string += "#### " + prova.regime + "\n\n";
         prova.exames.forEach(function (exame) {
+            
             string += "- " + exame.ano + "\n\n";
             if (exame.prova != "") {
                 string += "\t- [Prova](" + exame.prova + ")";
@@ -388,9 +529,16 @@ data.forEach(function (el) {
             string +="\n\n"
 
         })
-        string +="\n\n"
+        string += "</td>";
+        string += "\n\n";
+       
     })
+    string += "\n\n";
+    string += "</tr></table>";
     string +="\n\n"
-    string+="###### Ficheiro gerado em " + (new Date()).toISOString();
-    fs.writeFile("exames-passados/" +el.sigla.toLocaleLowerCase()+".md", string);
+    string += "###### Ficheiro gerado em " + (new Date()).toISOString();
+    
+    fs.writeFile("./exames-passados/" + el.sigla.toLocaleLowerCase() + ".md", minify(markdown.render(string),{collapseWhitespace:true}), () => {
+        console.log(`Gerado ficheiro para ${el.sigla}@${(new Date()).toISOString()}`)
+});
 })
