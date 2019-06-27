@@ -490,7 +490,12 @@ var data = [
 data.forEach(function (el) {
     var string = "";
     string += "# " + el.nome + '\n\n';
+    string += "<table><tr valign=\"top\">";
+    string += "\n\n";
     el.provas.forEach(function (prova) {
+        string += "<td>";
+        string += "\n\n";
+        
         string += "#### " + prova.regime + "\n\n";
         prova.exames.forEach(function (exame) {
             
@@ -521,8 +526,12 @@ data.forEach(function (el) {
             string +="\n\n"
 
         })
-        string +="\n\n"
+        string += "</td>";
+        string += "\n\n";
+       
     })
+    string += "\n\n";
+    string += "</tr></table>";
     string +="\n\n"
     string+="###### Ficheiro gerado em " + (new Date()).toISOString();
     fs.writeFile("./exames-passados/" + el.sigla.toLocaleLowerCase() + ".md", string, () => {

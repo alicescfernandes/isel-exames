@@ -1,5 +1,9 @@
 # Licenciatura em Engenharia Informática e Multimédia
 
+<table><tr valign="top">
+
+<td>
+
 #### M23
 
 - 2019
@@ -44,7 +48,9 @@
 
 
 
+</td>
 
+<td>
 
 #### DET
 
@@ -82,8 +88,10 @@
 
 
 
+</td>
 
 
 
+</tr></table>
 
-###### Ficheiro gerado em 2019-06-27T20:49:15.307Z
+###### Ficheiro gerado em 2019-06-27T21:01:31.777Z

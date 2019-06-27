@@ -12,3 +12,8 @@ Comecei a fazer isto porque entrei em concurso especial, e sentí-me frustrada c
 * [LEE](exames-passados/lee.md)
 * [LEM](exames-passados/lem.md)
 
+_Novos_
+* [LEQB](exames-passados/leqb.md)
+* [LEIRT](exames-passados/leirt.md)
+
+

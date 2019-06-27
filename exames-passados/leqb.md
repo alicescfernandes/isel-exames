@@ -1,5 +1,9 @@
 # [Novo] Licenciatura em Engenharia Química e Biológica
 
+<table><tr valign="top">
+
+<td>
+
 #### M23
 
 - 2019
@@ -8,7 +12,9 @@
 
 	- [Prova Modelo](https://www.isel.pt/media/uploads/tinymce/LEQBM23ProvaModelo2019.pdf) [(Solução)](https://www.isel.pt/media/uploads/tinymce/LEQBM23PModelo2019solucao.pdf)
 
+</td>
 
+<td>
 
 #### DET
 
@@ -18,8 +24,10 @@
 
 	- [Prova Modelo](https://www.isel.pt/media/uploads/tinymce/LEQBM23ProvaModelo2019.pdf) [(Solução)](https://www.isel.pt/media/uploads/tinymce/LEQBM23PModelo2019solucao.pdf)
 
+</td>
 
 
 
+</tr></table>
 
-###### Ficheiro gerado em 2019-06-27T20:49:15.308Z
+###### Ficheiro gerado em 2019-06-27T21:01:31.778Z
