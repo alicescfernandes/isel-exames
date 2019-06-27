@@ -32,7 +32,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIM_Prova_2017.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIM_Prova_Solucao_2017.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIM_ProvaModelo_2017.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIM_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIM_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -81,7 +81,7 @@ var data = [
                         "prova": "",
                         "prova_solucao": "",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEIM_ProvaModelo_2017.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEIM_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEIM_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -131,7 +131,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIC_Prova_2017.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIC_Prova_Solucao_2017.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIC_ProvaModelo_2017.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIC_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIC_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -180,7 +180,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEIC_Prova_2017.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEIC_Prova_Solucao_2017.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEIC_ProvaModelo_2017.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEIC_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEIC_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -218,8 +218,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/LEM_ProvaM23_2019.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEM_ProvaM23_2019_Solucoes.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEMM23ProvaModelo2019.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEMM23PModelo2019solucao.pdf"
-                    },
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEMM23PModelo2019solucao.pdf"                    },
                     {
                         "ano": "2018",
                         "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEM_Prova2018.pdf",
@@ -232,7 +231,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEM_Prova_2017.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEM_Prova_Solucao_2017.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEM_ProvaModelo_2017.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEM_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEM_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -282,7 +281,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEM_Prova_2017.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEM_Prova_Solucao_2017.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEM_ProvaModelo_2017.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEM_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEM_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -300,8 +299,6 @@ var data = [
                     }
                 ]
             }
-
-
         ]
     },
 
@@ -334,7 +331,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEE_Prova_2017.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEE_Prova_Solucao_2017.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEE_ProvaModelo_2017.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEE_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEE_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -383,7 +380,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEE_Prova_2017.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEE_Prova_Solucao_2017.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEE_ProvaModelo_2017.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEE_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEE_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -416,8 +413,6 @@ var data = [
         "sigla": "LEIRT",
         "nome": "Licenciatura em Engenharia Informática, Redes e Telecomunicações",
         "provas": [
-
-
             {
                 "nome": "asdasd",
                 "regime": "M23",
@@ -441,7 +436,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEIRT_Prova_2017.pdf",
                         "prova_solucao": "",
                         "prova_modelo": "",
-                        "prova_modelo_solucao": "",
+                        "prova_modelo_solucao": ""
                     },
         
                     {
@@ -507,7 +502,7 @@ var data = [
                         "prova": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_Prova_2017.pdf",
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_Prova_Solucao_2017.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_ProvaModelo_2017.pdf",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -542,7 +537,7 @@ var data = [
                         "prova": "",
                         "prova_solucao": "",
                         "prova_modelo": "",
-                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEQB_ProvaModelo_Solucao_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEQB_ProvaModelo_Solucao_2017.pdf"
                     },
                     {
                         "ano": "2016",
@@ -620,3 +615,11 @@ data.forEach(function (el) {
         console.log(`Gerado ficheiro para ${el.sigla}@${(new Date()).toISOString()}`)
 });
 })
+
+fs.readFile("./sitemap-temp.xml", 'utf-8', (err, data) => {
+    if (err) throw err;
+    
+    fs.writeFile("./sitemap.xml",  data.replace(/{{date}}/g, (new Date()).toISOString()), () => {});
+    
+})
+
