@@ -1,0 +1,21 @@
+{
+  "name": "isel-exames",
+  "version": "1.0.0",
+  "description": "Aqui vais encontrar exames e algumas dicas sobre o concurso especial de acesso, que normalmente é aberto pelo ISEL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alicescfernandes/isel-exames.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alicescfernandes/isel-exames/issues"
+  },
+  "homepage": "https://github.com/alicescfernandes/isel-exames#readme",
+  "dependencies": {}
+}
