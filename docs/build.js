@@ -453,7 +453,7 @@ var data = [
         "sigla": "LEQB",
         "nome": "[Novo] Licenciatura em Engenharia Química e Biológica",
         "provas": [
-           
+
 
             {
                 "nome": "asdasd",
@@ -465,6 +465,27 @@ var data = [
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019_Solucoes.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEQBM23ProvaModelo2019.pdf",
                         "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQBM23PModelo2019solucao.pdf"
+                    },
+                    {
+                        "ano": "2018",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEQB_Prova2018.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEQB_Prova2018_solucao.pdf",
+                        "prova_modelo": "",
+                        "prova_modelo_solucao": ""
+                    },
+                    {
+                        "ano": "2017",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_Prova_2017.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_Prova_Solucao_2017.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_ProvaModelo_2017.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_ProvaModelo_Solucao_2017.pdf",
+                    },
+                    {
+                        "ano": "2016",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_Prova_2016.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_Solucao2016.pdf",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_Prova_Modelo_2016.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/m23/M23_LEQB_Solucao_Prova_Modelo_2016.pdf"
                     }
                 ]
             },
@@ -479,13 +500,41 @@ var data = [
                         "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQB_ProvaM23_2019_Solucoes.pdf",
                         "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/LEQBM23ProvaModelo2019.pdf",
                         "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/LEQBM23PModelo2019solucao.pdf"
+                    },
+                    {
+                        "ano": "2018",
+                        "prova": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEQB_Prova2018.pdf",
+                        "prova_solucao": "https://www.isel.pt/media/uploads/tinymce/ISEL_LEQB_Prova2018_solucao.pdf",
+                        "prova_modelo": "",
+                        "prova_modelo_solucao": ""
+                    },
+                    {
+                        "ano": "2017",
+                        "prova": "",
+                        "prova_solucao": "",
+                        "prova_modelo": "",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEQB_ProvaModelo_Solucao_2017.pdf",
+                    },
+                    {
+                        "ano": "2016",
+                        "prova": "",
+                        "prova_solucao": "",
+                        "prova_modelo": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEQB_Prova_Modelo_2016.pdf",
+                        "prova_modelo_solucao": "https://www.isel.pt/media/uploads/tinymce/det/DET_LEQB_Solucao_Prova_Modelo_2016.pdf"
+                    },
+                    {
+                        "ano": "2015",
+                        "prova": "",
+                        "prova_solucao": "",
+                        "prova_modelo": "http://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEQB.pdf",
+                        "prova_modelo_solucao": ""
                     }
                 ]
             }
 
 
         ]
-    }
+       }
 ];
 
 

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js"
+    "build": "node build.js && gitbook build . docs/",
+    "commit": "git add . &&  git commit -m \"Self-Hosted Version Update\" ",
+    "make":"npm run build && npm run commit"
   },
   "repository": {
     "type": "git",
