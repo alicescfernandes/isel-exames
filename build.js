@@ -1,6 +1,8 @@
 var fs = require("fs");
 var path = require("path");
 var minify = require('html-minifier').minify;
+const https = require('https');
+var archiver = require('archiver');
 
 var markdown = require('markdown-it')({html:true});
 
@@ -94,7 +96,7 @@ var data = [
                         "ano": "2015",
                         "prova": "",
                         "prova_solucao": "",
-                        "prova_modelo": "http://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEIM.pdf",
+                        "prova_modelo": "https://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEIM.pdf",
                         "prova_modelo_solucao": ""
                     }
                 ]
@@ -193,7 +195,7 @@ var data = [
                         "ano": "2015",
                         "prova": "",
                         "prova_solucao": "",
-                        "prova_modelo": "http://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEIC.pdf",
+                        "prova_modelo": "https://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEIC.pdf",
                         "prova_modelo_solucao": ""
                     }
                 ]
@@ -294,7 +296,7 @@ var data = [
                         "ano": "2015",
                         "prova": "",
                         "prova_solucao": "",
-                        "prova_modelo": "http://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEM.pdf",
+                        "prova_modelo": "https://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEM.pdf",
                         "prova_modelo_solucao": ""
                     }
                 ]
@@ -400,7 +402,7 @@ var data = [
                         "ano": "2015",
                         "prova": "",
                         "prova_solucao": "",
-                        "prova_modelo": "http://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEE.pdf",
+                        "prova_modelo": "https://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEE.pdf",
                         "prova_modelo_solucao": ""
                     }
                 ]
@@ -550,7 +552,7 @@ var data = [
                         "ano": "2015",
                         "prova": "",
                         "prova_solucao": "",
-                        "prova_modelo": "http://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEQB.pdf",
+                        "prova_modelo": "https://arquivo.pt/wayback/20151012124431/https://www.isel.pt/media/uploads/tinymce/Prova_Modelo_DETS_2015_LEQB.pdf",
                         "prova_modelo_solucao": ""
                     }
                 ]
@@ -561,7 +563,18 @@ var data = [
        }
 ];
 
+var output = fs.createWriteStream('./exames.zip');
+var archive = archiver('zip', {
+    zlib: { level: 9 } // Sets the compression level.
+});
 
+
+output.on('close', function() {
+    console.log(archive.pointer() + ' total bytes');
+    console.log('archiver has been finalized and the output file descriptor has closed.');
+});
+    
+archive.pipe(output);
 
 data.forEach(function (el) {
     var string = "";
@@ -577,12 +590,14 @@ data.forEach(function (el) {
             
             string += "- " + exame.ano + "\n\n";
             if (exame.prova != "") {
+                download(exame.prova, "exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_Prova`)
                 string += "\t- [Prova](" + exame.prova + ")";
             } else {
                 string += "\t- Prova";
             }
 
             if (exame.prova_solucao != "") {
+            download(exame.prova_solucao,"exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_Prova_Solucao`)
                 string += " [(Solução)](" + exame.prova_solucao + ")";
             } else {
                 string += " (Solução)";
@@ -590,11 +605,13 @@ data.forEach(function (el) {
             string +="\n\n"
 
             if (exame.prova_modelo != "") {
+                download(exame.prova_modelo,"exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_ProvaModelo`)
                 string += "\t- [Prova Modelo](" + exame.prova_modelo + ")";
             } else {
                 string += "\t- Prova Modelo";
             }
             if (exame.prova_modelo_solucao != "") {
+                download(exame.prova_modelo_solucao,"exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_ProvaModelo_Solucao`)
                 string += " [(Solução)](" + exame.prova_modelo_solucao + ")";
             } else {
                 string += " (Solução) \n\n";
@@ -623,3 +640,34 @@ fs.readFile("./sitemap-temp.xml", 'utf-8', (err, data) => {
     
 })
 
+function download(url, path, nome) {
+    var fileName = url.split("/");
+    fileName = path + fileName[fileName.length - 1];
+    if (nome) {
+            fileName =  path + nome + ".pdf";
+    }
+    
+    if (!fs.existsSync(fileName)) {
+        if (!fs.existsSync(path)) {
+            let pathC = path.split("/");
+            for (var dirIDX = 1; dirIDX < pathC.length; dirIDX++) {
+                var dir = pathC.slice(0, dirIDX).join("/");
+                if (!fs.existsSync(dir)) {
+                    fs.mkdirSync(dir);
+                }
+            }
+        }
+
+        
+        var file = fs.createWriteStream(fileName);
+        var request = https.get(url, function (response) {
+            response.pipe(file);
+            file.on('finish', function () {
+                file.close();
+            });
+        });
+    }
+}
+
+archive.directory('exames/', false);
+archive.finalize();
