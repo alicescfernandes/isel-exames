@@ -660,7 +660,7 @@ function download(url, path, nome) {
 
         
         var file = fs.createWriteStream(fileName);
-        var request = https.get(url, function (response) {
+        https.get(url, function (response) {
             response.pipe(file);
             file.on('finish', function () {
                 file.close();
