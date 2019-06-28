@@ -590,14 +590,14 @@ data.forEach(function (el) {
             
             string += "- " + exame.ano + "\n\n";
             if (exame.prova != "") {
-                download(exame.prova, "exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_Prova`)
+                download(exame.prova, ".exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_Prova`)
                 string += "\t- [Prova](" + exame.prova + ")";
             } else {
                 string += "\t- Prova";
             }
 
             if (exame.prova_solucao != "") {
-            download(exame.prova_solucao,"exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_Prova_Solucao`)
+            download(exame.prova_solucao,".exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_Prova_Solucao`)
                 string += " [(Solução)](" + exame.prova_solucao + ")";
             } else {
                 string += " (Solução)";
@@ -605,13 +605,13 @@ data.forEach(function (el) {
             string +="\n\n"
 
             if (exame.prova_modelo != "") {
-                download(exame.prova_modelo,"exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_ProvaModelo`)
+                download(exame.prova_modelo,".exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_ProvaModelo`)
                 string += "\t- [Prova Modelo](" + exame.prova_modelo + ")";
             } else {
                 string += "\t- Prova Modelo";
             }
             if (exame.prova_modelo_solucao != "") {
-                download(exame.prova_modelo_solucao,"exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_ProvaModelo_Solucao`)
+                download(exame.prova_modelo_solucao,".exames/"+prova.regime+"/"+el.sigla+"/",  `${el.sigla}_${exame.ano}_ProvaModelo_Solucao`)
                 string += " [(Solução)](" + exame.prova_modelo_solucao + ")";
             } else {
                 string += " (Solução) \n\n";
@@ -669,5 +669,5 @@ function download(url, path, nome) {
     }
 }
 
-archive.directory('exames/', false);
+archive.directory('.exames/', false);
 archive.finalize();
