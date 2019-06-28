@@ -6,3 +6,7 @@
 * [LEQB](exames-passados/leqb.md)
 * [LEIRT](exames-passados/leirt.md)
 
+
+
+
+[Descarregar todos os Exames](exames.zip)
