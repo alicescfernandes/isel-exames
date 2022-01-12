@@ -23,6 +23,6 @@
     "archiver": "^3.0.0",
     "gitbook-cli": "^2.3.2",
     "html-minifier": "^4.0.0",
-    "markdown-it": "^8.4.2"
+    "markdown-it": "^12.3.2"
   }
 }
